@@ -1,0 +1,5 @@
+
+useDynLib(pooh)
+
+export(weak)
+
