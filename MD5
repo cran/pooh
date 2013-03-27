@@ -1,0 +1,8 @@
+47311260d0234a505d2d5bfb82fa17d1 *DESCRIPTION
+ceced1a72d2b0e5bfae1e5d13cc9ca50 *LICENSE
+05f87f6245964d22fc98f67f2e3fdce2 *NAMESPACE
+7c2f5bdebb7d35edbdfdd6b0c7596fc0 *R/weak.R
+a8f1b7b984dd3f4f7ce2a0fffdd251d7 *man/weak.Rd
+cf4eb3cf4f253507831932fad74e18a9 *src/weak.c
+daca14b2f8ecbd3978228d069a0a2d7f *tests/eeyore.R
+650182542cd3413b4997955995e17aee *tests/eeyore.Rout.save

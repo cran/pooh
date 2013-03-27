@@ -1,13 +1,14 @@
 Package: pooh
-Version: 0.2
-Date: 2009-09-20
+Version: 0.2-1
+Date: 2013-03-27
 Title: Partial Orders and Relations
 Author: Charles J. Geyer <charlie@stat.umn.edu>.
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
-Depends: R (>= 2.4.1)
+Depends: R (>= 2.6.0)
 Description: functions for computing closures of relations
-License: X11
+License: MIT + file LICENSE
 URL: http://www.stat.umn.edu/geyer/pooh/
-Packaged: 2009-09-20 23:43:25 UTC; charlie
+Packaged: 2013-03-28 03:16:19 UTC; charlie
+NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2009-09-22 08:22:39
+Date/Publication: 2013-03-29 12:24:39
