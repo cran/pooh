@@ -14,7 +14,7 @@ weak(from, to, domain, markers = FALSE)
   \item{from}{an atomic vector}
   \item{to}{an atomic vector of the same mode and length as \code{from}}
   \item{domain}{an atomic vector of the same mode as \code{from} containing
-      all the elements of \code{from} and \code{to}.  If missing
+      all the elements of \code{from} and \code{to}.  If missing,
       \code{union(from, to)} is used.  The domain of the relation or the
       nodes of the graph.}
   \item{markers}{controls the type of result; see Values below.}

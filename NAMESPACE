@@ -1,5 +1,6 @@
 
 useDynLib(pooh)
 
+export(tsort)
 export(weak)
 

@@ -1,8 +1,13 @@
-47311260d0234a505d2d5bfb82fa17d1 *DESCRIPTION
-ceced1a72d2b0e5bfae1e5d13cc9ca50 *LICENSE
-05f87f6245964d22fc98f67f2e3fdce2 *NAMESPACE
+5fad57aea88f742d3ef259de8681378d *DESCRIPTION
+f72ec0be550472c04c7ba25d847ddaee *LICENSE
+22f827a404bf93f247776c2ceb9b7970 *NAMESPACE
+1b75c1221e6d595ca587c38c8762b44e *R/tsort.R
 7c2f5bdebb7d35edbdfdd6b0c7596fc0 *R/weak.R
-a8f1b7b984dd3f4f7ce2a0fffdd251d7 *man/weak.Rd
+07d3ae4b9ce4bf12c9a6a9550e8b6b5a *man/tsort.Rd
+80b2ad3dd4c78bc037f00a685f549470 *man/weak.Rd
+c6d35b88df97a44aab226fac78467d34 *src/tsort.c
 cf4eb3cf4f253507831932fad74e18a9 *src/weak.c
 daca14b2f8ecbd3978228d069a0a2d7f *tests/eeyore.R
 650182542cd3413b4997955995e17aee *tests/eeyore.Rout.save
+b824107136cd7099eaeb0ad570e9f1c1 *tests/heffalump.R
+5379ee2e17a5a4bcf040d9dee083524c *tests/heffalump.Rout.save
