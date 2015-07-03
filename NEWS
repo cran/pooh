@@ -1,0 +1,15 @@
+
+CHANGES IN pooh 0.3-1:
+
+ * added strict option to tsort, needed for pedigrees (package aster)
+ * also bug fix, tsort was buggy anyway, incorrectly handled cyclic graphs
+
+CHANGES IN pooh 0.3-0:
+
+ * added tsort (topological sort)
+ * fixed LICENCE file (again as per newer CRAN instructions)
+
+CHANGES IN pooh 0.2-2:
+
+ * fixed LICENCE file (as per then CRAN instructions)
+

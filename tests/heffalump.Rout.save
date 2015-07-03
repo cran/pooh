@@ -1,6 +1,6 @@
 
-R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
-Copyright (C) 2014 The R Foundation for Statistical Computing
+R version 3.2.1 (2015-06-18) -- "World-Famous Astronaut"
+Copyright (C) 2015 The R Foundation for Statistical Computing
 Platform: i686-pc-linux-gnu (32-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -29,7 +29,11 @@ Type 'q()' to quit R.
 >  baz <- pmin(foo, bar)
 >  qux <- pmax(foo, bar)
 > 
->  quacks <- tsort(baz, qux, d)
+>  quacks <- tsort(baz, qux, d, strict = FALSE)
+>  try(tsort(baz, qux, d))
+Error in tsort(baz, qux, d) : cyclic graph
+>  any(baz == qux)
+[1] TRUE
 > 
 >  length(quacks) == length(d)
 [1] TRUE
@@ -43,7 +47,19 @@ Type 'q()' to quit R.
 >  quacks <- try(tsort(1:2, 2:1))
 Error in tsort(1:2, 2:1) : cyclic graph
 > 
+>  tsort(character(0), character(0))
+character(0)
+>  tsort(character(0), character(0), domain = 1:5)
+[1] 5 4 3 2 1
+> 
+>  try(tsort(1:5, 2:6))
+[1] 1 2 3 4 5 6
+>  try(tsort(c(1:5, 1), c(2:6, 1)))
+Error in tsort(c(1:5, 1), c(2:6, 1)) : cyclic graph
+>  try(tsort(c(1:5, 1), c(2:6, 1), strict = FALSE))
+[1] 1 2 3 4 5 6
+> 
 > 
 > proc.time()
    user  system elapsed 
-  0.276   0.032   0.303 
+  0.240   0.040   0.274 

@@ -6,10 +6,12 @@
 #include <R.h>
 #include <stddef.h>
 
-void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult)
+void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult,
+    int *strictin)
 {
     int m = lenfrom[0];
     int n = lenresult[0];
+    int strict = strictin[0];
 
     for (int i = 0; i < m; ++i) {
         if (from[i] <= 0 || from[i] > n)
@@ -17,6 +19,8 @@ void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult)
         if (to[i] <= 0 || to[i] > n)
             error("to out of range");
     }
+    if ((strict != 0) && (strict != 1))
+        error("strict must be logical");
 
     int *stack = (int *) R_alloc(n, sizeof(int));
     int nstack = 0;
@@ -40,7 +44,7 @@ void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult)
         // convert to zero-origin indexing
         int ifrom = from[i] - 1;
         int ito = to[i] - 1;
-        if (ifrom != ito) {
+        if (strict || (ifrom != ito)) {
             ++indegree[ito];
             tolistcell[i].val = ito;
             tolistcell[i].next = tolist[ifrom];
@@ -54,13 +58,11 @@ void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult)
 
     // initialization done
 
-    if (nstack == 0)
-        error("cyclic graph");
-
     for (int i = 0; i < n; ++i) {
 
         if (nstack == 0)
-            error("can't happen: a bug");
+            error("cyclic graph");
+
         int j = stack[--nstack];
 
         // convert back to one-origin indexing

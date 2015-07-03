@@ -10,7 +10,7 @@
   Acyclic Graph
 }
 \usage{
-tsort(from, to, domain)
+tsort(from, to, domain, strict = TRUE)
 }
 \arguments{
   \item{from}{an atomic vector}
@@ -19,6 +19,8 @@ tsort(from, to, domain)
       all the elements of \code{from} and \code{to}.  If missing,
       \code{union(from, to)} is used.  The domain of the relation or the
       nodes of the graph.}
+  \item{strict}{logical.  If \code{TRUE} then \code{from[i] == to[i]} is
+      an error.  Otherwise, such edges of the graph are ignored.}
 }
 \details{
 Pairs \code{(from[i], to[i])} can be though of either as elements of
