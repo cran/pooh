@@ -1,4 +1,8 @@
 
+CHANGES IN pooh 0.3-2:
+
+ * register native routines
+
 CHANGES IN pooh 0.3-1:
 
  * added strict option to tsort, needed for pedigrees (package aster)

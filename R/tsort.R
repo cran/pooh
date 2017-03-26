@@ -16,10 +16,9 @@ tsort <- function(from, to, domain, strict = TRUE) {
     }
     efrom <- match(from, domain)
     eto <- match(to, domain)
-    out <- .C("tsort", from = as.integer(efrom), to = as.integer(eto),
+    out <- .C(C_tsort, from = as.integer(efrom), to = as.integer(eto),
         lenfrom = as.integer(length(efrom)), result = integer(length(domain)),
-        lenresult = as.integer(length(domain)), strict = strict,
-        PACKAGE = "pooh")
+        lenresult = as.integer(length(domain)), strict = strict)
     sout <- domain[out$result]
     return(sout)
 }

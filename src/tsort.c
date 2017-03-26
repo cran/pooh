@@ -5,6 +5,7 @@
 
 #include <R.h>
 #include <stddef.h>
+#include "pooh.h"
 
 void tsort(int *from, int *to, int *lenfrom, int *result, int *lenresult,
     int *strictin)

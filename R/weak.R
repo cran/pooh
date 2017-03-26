@@ -14,9 +14,9 @@ weak <- function(from, to, domain, markers = FALSE) {
     }
     efrom <- match(from, domain)
     eto <- match(to, domain)
-    out <- .C("weak", from = as.integer(efrom), to = as.integer(eto),
+    out <- .C(C_weak, from = as.integer(efrom), to = as.integer(eto),
         lenfrom = as.integer(length(efrom)), result = integer(length(domain)),
-        lenresult = as.integer(length(domain)), PACKAGE = "pooh")
+        lenresult = as.integer(length(domain)))
     if (markers) {
         sir <- sort(unique(out$result))
         sout <- match(out$result, sir)

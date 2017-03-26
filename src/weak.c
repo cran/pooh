@@ -19,6 +19,7 @@ static void update(int *ff, int p0, int q0)
 }
 
 #include <R.h>
+#include "pooh.h"
 
 void weak(int *from, int *to, int *lenfrom, int *result, int *lenresult)
 {

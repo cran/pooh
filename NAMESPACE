@@ -1,5 +1,5 @@
 
-useDynLib(pooh)
+useDynLib(pooh, .registration = TRUE, .fixes = "C_")
 
 export(tsort)
 export(weak)
